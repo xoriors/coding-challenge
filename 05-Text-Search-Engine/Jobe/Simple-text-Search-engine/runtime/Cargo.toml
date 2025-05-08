@@ -1,0 +1,27 @@
+[package]
+name = "runtime"
+version = "0.1.0"
+edition = "2021"
+default-run = "runtime"
+
+[dependencies]
+tui = { package = "ratatui", version = "0.29.0", features = ["all-widgets"]}
+unicode-segmentation = { workspace = true }
+data_structs = { workspace = true }
+serde_json = { workspace = true }
+bincode = { workspace = true }
+serde = { workspace = true }
+throbber-widgets-tui = "0.8.0"
+levenshtein = "=1.0.5"
+crossterm = "0.29.0"
+colored = "2.0"
+rand = "^0.8.5"
+chrono = "0.4"
+# include dependencies needed to read serialized.bin, etc.
+
+[dev-dependencies]
+criterion = { workspace = true }
+
+[[bench]]
+name = "benchmark_search"
+harness = false
