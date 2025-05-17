@@ -1,0 +1,19 @@
+[package]
+name = "compile"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+unicode-segmentation = { workspace = true }
+data_structs = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+bincode = { workspace= true }
+serde = { workspace = true }
+
+[dev-dependencies]
+criterion = { workspace = true }
+
+[[bench]]
+name = "benchmark_store"
+harness = false
